@@ -25,6 +25,12 @@
           <span class="brand-text">AURA CHRONOS</span>
         </div>
       </div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#profile-section" class="nav-link">Profile</a>
+        <a href="#clock-card" class="nav-link">Live Clock</a>
+        <a href="#skills-section" class="nav-link">Skills</a>
+        <a href="#projects-section" class="nav-link">Projects</a>
+      </nav>
       <div class="nav-actions">
         <!-- Status Indicator -->
         <div class="status-pill" id="status-pill" title="Click to cycle status">
@@ -82,8 +88,29 @@
             </div>
             
             <p class="user-tagline" id="user-tagline" contenteditable="true" spellcheck="false" title="點擊即可修改自我介紹或座右銘">
-              IoT Class 0916 • 軟體與物聯網創作
+              IoT Class 0916 • 物聯網與現代網頁前端開發者
             </p>
+
+            <div class="profile-meta-tags">
+              <span class="meta-tag">🎓 領域: IoT &amp; Embedded Systems</span>
+              <span class="meta-tag">💻 專精: Modern Web Frontend</span>
+              <span class="meta-tag">📍 Taiwan</span>
+            </div>
+
+            <div class="profile-action-row">
+              <a href="https://github.com/johnny051777" target="_blank" rel="noopener noreferrer" class="profile-chip-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub Profile
+              </a>
+              <a href="https://github.com/johnny051777/IoT_Class_0916" target="_blank" rel="noopener noreferrer" class="profile-chip-btn highlight">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                IoT_Class_0916 Repo
+              </a>
+              <a href="https://johnny051777.github.io/IoT_Class_0916/" target="_blank" rel="noopener noreferrer" class="profile-chip-btn live-btn">
+                <span class="live-indicator-dot"></span>
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -179,6 +206,169 @@
                 <button class="btn-ghost" id="stopwatch-reset-btn">Reset</button>
               </div>
               <div class="laps-container" id="laps-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Showcase Section (At least 3 Skills) -->
+      <section class="skills-section-wrapper" id="skills-section">
+        <div class="section-title-row">
+          <div class="section-badge">CORE CAPABILITIES</div>
+          <h2 class="section-heading">專業技能專長 • Skills &amp; Stack</h2>
+          <p class="section-subtext">結合物聯網硬體整合、現代 Web 前端交互與雲端通訊架構</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: IoT & Embedded -->
+          <div class="skill-card glass-panel">
+            <div class="skill-icon-box">
+              <span class="skill-icon">📡</span>
+              <span class="skill-score">92%</span>
+            </div>
+            <h3 class="skill-title">物聯網與嵌入式開發</h3>
+            <span class="skill-en">IoT &amp; Embedded Systems</span>
+            <p class="skill-desc">精通微控制器韌體開發、感測器數據採集、GPIO/I2C/SPI 週邊介面整合與低功耗物聯網傳輸架構。</p>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" style="width: 92%"></div>
+            </div>
+            <div class="skill-tech-tags">
+              <span class="tech-pill">ESP32</span>
+              <span class="tech-pill">Arduino</span>
+              <span class="tech-pill">MQTT</span>
+              <span class="tech-pill">Sensors</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Modern Web Frontend -->
+          <div class="skill-card glass-panel">
+            <div class="skill-icon-box">
+              <span class="skill-icon">💻</span>
+              <span class="skill-score">90%</span>
+            </div>
+            <h3 class="skill-title">現代前端工程與 UI 設計</h3>
+            <span class="skill-en">Modern Frontend &amp; UI/UX</span>
+            <p class="skill-desc">擅長深色毛玻璃 (Glassmorphism) 設計風格、流暢微互動動畫、高響應性 (RWD) 與狀態持久化。</p>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" style="width: 90%"></div>
+            </div>
+            <div class="skill-tech-tags">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3 Glassmorphic</span>
+              <span class="tech-pill">JavaScript ES6+</span>
+              <span class="tech-pill">Responsive RWD</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Cloud & API Integration -->
+          <div class="skill-card glass-panel">
+            <div class="skill-icon-box">
+              <span class="skill-icon">⚡</span>
+              <span class="skill-score">86%</span>
+            </div>
+            <h3 class="skill-title">雲端傳輸與 API 整合</h3>
+            <span class="skill-en">Cloud &amp; API Integration</span>
+            <p class="skill-desc">設計端對端物聯網數據流、RESTful API 串接、WebSocket 即時雙向通訊與 JSON 結構化解析。</p>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" style="width: 86%"></div>
+            </div>
+            <div class="skill-tech-tags">
+              <span class="tech-pill">RESTful API</span>
+              <span class="tech-pill">WebSocket</span>
+              <span class="tech-pill">JSON</span>
+              <span class="tech-pill">Node.js</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: DevOps & Version Control -->
+          <div class="skill-card glass-panel">
+            <div class="skill-icon-box">
+              <span class="skill-icon">🛠️</span>
+              <span class="skill-score">88%</span>
+            </div>
+            <h3 class="skill-title">版本控制與自動化部署</h3>
+            <span class="skill-en">Git &amp; DevOps Workflow</span>
+            <p class="skill-desc">熟練 Git 分支協作、儲存庫版本管理、GitHub Pages 雲端託管與 CI/CD 自動建置流程。</p>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" style="width: 88%"></div>
+            </div>
+            <div class="skill-tech-tags">
+              <span class="tech-pill">Git</span>
+              <span class="tech-pill">GitHub</span>
+              <span class="tech-pill">GitHub Pages</span>
+              <span class="tech-pill">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Showcase Section (At least 1 Project) -->
+      <section class="projects-section-wrapper" id="projects-section">
+        <div class="section-title-row">
+          <div class="section-badge">PORTFOLIO WORK</div>
+          <h2 class="section-heading">專案作品集 • Featured Projects</h2>
+          <p class="section-subtext">將物聯網概念與現代軟體工程落實為高品質互動應用</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Featured Project 1: Aura Chronos -->
+          <div class="project-card glass-panel featured-project">
+            <div class="project-top-banner">
+              <div class="project-badge-row">
+                <span class="project-badge featured">⭐ 精選作品</span>
+                <span class="project-badge active">🟢 線上運行中</span>
+              </div>
+              <span class="project-date">2026.09</span>
+            </div>
+            <h3 class="project-name">Aura Chronos — IoT &amp; Time+ 個人專注時鐘儀表板</h3>
+            <p class="project-summary">
+              專為物聯網與軟體開發者打造的個人化高精度即時時鐘與專注中心。具備動態問候語、世界各大都市時區即時轉換、毫秒級碼錶、本日進度條與深色主題切換。
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ 原生 JavaScript 毫秒級高精度時鐘與 12/24H 切換</div>
+              <div class="highlight-item">✓ 支援跨裝置響應式設計 (RWD) 與深色毛玻璃美學</div>
+              <div class="highlight-item">✓ 整合 localStorage 永久儲存個人姓名 (林昱岑) 與座右銘</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3 Glassmorphism</span>
+              <span class="tech-pill">JavaScript ES6+</span>
+              <span class="tech-pill">GitHub Pages</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://johnny051777.github.io/IoT_Class_0916/" target="_blank" rel="noopener noreferrer" class="btn-primary project-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                線上 Live Demo
+              </a>
+              <a href="https://github.com/johnny051777/IoT_Class_0916" target="_blank" rel="noopener noreferrer" class="btn-secondary project-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub 原始碼
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: ESP32 IoT Environment Monitor -->
+          <div class="project-card glass-panel">
+            <div class="project-top-banner">
+              <div class="project-badge-row">
+                <span class="project-badge iot">📡 物聯網硬體</span>
+                <span class="project-badge dev">⚙️ 開發中專案</span>
+              </div>
+              <span class="project-date">2026.09</span>
+            </div>
+            <h3 class="project-name">ESP32 智慧環境監測與感測器網關系統</h3>
+            <p class="project-summary">
+              運用 ESP32 開發板擷取 DHT22 溫濕度與光敏傳感器數值，透過 MQTT 協定定期將 JSON 數據封包發布至物聯網代理伺服器，並於 Web 介面實現低延遲即時圖表監控。
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ 微控制器週邊硬體 I2C/SPI 與類比訊號校準處理</div>
+              <div class="highlight-item">✓ 支援 MQTT 斷線重連與心跳包 (Heartbeat) 機制</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">ESP32</span>
+              <span class="tech-pill">Arduino C++</span>
+              <span class="tech-pill">MQTT Broker</span>
+              <span class="tech-pill">Chart.js</span>
             </div>
           </div>
         </div>
