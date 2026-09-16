@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Chronos Hub - An ultra-modern personal dashboard featuring real-time high-precision clock, world times, profile customization, and daily focus tools.">
+  <title>Personal Hub • Time & Focus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-obsidian">
+  <!-- Dynamic ambient background light orbs -->
+  <div class="ambient-glow orb-1" aria-hidden="true"></div>
+  <div class="ambient-glow orb-2" aria-hidden="true"></div>
+  <div class="ambient-glow orb-3" aria-hidden="true"></div>
+
+  <div class="app-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav" id="top-nav">
+      <div class="nav-brand">
+        <div class="brand-badge">
+          <span class="pulse-dot"></span>
+          <span class="brand-text">AURA CHRONOS</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <!-- Status Indicator -->
+        <div class="status-pill" id="status-pill" title="Click to cycle status">
+          <span class="status-dot"></span>
+          <span id="status-text">In the Flow</span>
+        </div>
+        <!-- Theme Selector -->
+        <div class="theme-menu">
+          <button id="theme-btn" class="icon-btn" title="Change Visual Theme" aria-label="Change Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Profile & Greeting Section -->
+      <section class="profile-hero-card glass-panel" id="profile-section">
+        <div class="profile-layout">
+          <div class="avatar-container">
+            <div class="avatar-ring">
+              <div class="avatar-inner" id="avatar-display">
+                <span id="avatar-initials">JH</span>
+              </div>
+            </div>
+            <button class="edit-avatar-btn" id="edit-avatar-btn" title="Cycle Avatar Color" aria-label="Cycle avatar color">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </button>
+          </div>
+
+          <div class="profile-details">
+            <div class="greeting-row">
+              <span class="greeting-badge" id="greeting-text">Good Day</span>
+              <span class="location-badge" id="location-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span id="user-timezone">Detecting timezone...</span>
+              </span>
+            </div>
+
+            <div class="name-edit-wrapper">
+              <h1 class="user-name" id="user-name" contenteditable="true" spellcheck="false" title="Click to edit your name">Johnny</h1>
+              <button class="name-edit-icon" id="name-edit-btn" title="Edit name" aria-label="Edit your name">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              </button>
+            </div>
+            
+            <p class="user-tagline" id="user-tagline" contenteditable="true" spellcheck="false" title="Click to edit your personal bio or focus goal">
+              IoT Class 0916 • Developer &amp; Creator
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Centerpiece: Live Current Time+ Hub -->
+      <section class="time-hub-grid">
+        <!-- Main Primary Clock Card -->
+        <div class="clock-primary-card glass-panel" id="clock-card">
+          <div class="clock-header">
+            <span class="card-label">CURRENT LOCAL TIME</span>
+            <div class="clock-format-toggle">
+              <button id="format-toggle-btn" class="format-pill active" title="Toggle 12/24 hour format">
+                <span id="format-label">24H</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Digital Clock Display -->
+          <div class="clock-display" id="clock-display">
+            <div class="time-digits-group">
+              <div class="digit-box" id="hours-box">
+                <span class="digit" id="hours">00</span>
+                <span class="digit-label">HOURS</span>
+              </div>
+              <span class="digit-colon">:</span>
+              <div class="digit-box" id="minutes-box">
+                <span class="digit" id="minutes">00</span>
+                <span class="digit-label">MINUTES</span>
+              </div>
+              <span class="digit-colon">:</span>
+              <div class="digit-box" id="seconds-box">
+                <span class="digit" id="seconds">00</span>
+                <span class="digit-label">SECONDS</span>
+              </div>
+            </div>
+            <span class="ampm-tag" id="ampm"></span>
+          </div>
+
+          <!-- Live Date & Day Progress -->
+          <div class="date-calendar-row">
+            <div class="calendar-chip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span id="full-date-string">Loading date...</span>
+            </div>
+            <div class="week-chip">
+              <span id="week-number-string">Week --</span>
+            </div>
+          </div>
+
+          <!-- Day Progress Bar -->
+          <div class="day-progress-container">
+            <div class="day-progress-header">
+              <span class="progress-title">Today's Journey</span>
+              <span class="progress-percent" id="day-percent">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="day-progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress-subtext">
+              <span id="time-remaining-today">-- hours remaining today</span>
+              <span id="utc-offset-label">UTC --</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time+ Companion Widget (World Clock & Stopwatch / Focus Mode) -->
+        <div class="time-companion-card glass-panel" id="companion-card">
+          <div class="tab-switcher">
+            <button class="tab-btn active" id="tab-world-btn" data-target="world-clock-tab">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              World Times
+            </button>
+            <button class="tab-btn" id="tab-focus-btn" data-target="focus-timer-tab">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Stopwatch & Focus
+            </button>
+          </div>
+
+          <!-- World Clocks Content -->
+          <div class="tab-content active" id="world-clock-tab">
+            <div class="world-clock-list" id="world-clock-list">
+              <!-- Rendered dynamically in app.js -->
+            </div>
+          </div>
+
+          <!-- Stopwatch / Focus Content -->
+          <div class="tab-content" id="focus-timer-tab">
+            <div class="stopwatch-container">
+              <div class="stopwatch-timer" id="stopwatch-display">00:00.00</div>
+              <div class="stopwatch-controls">
+                <button class="btn-primary" id="stopwatch-toggle-btn">Start</button>
+                <button class="btn-secondary" id="stopwatch-lap-btn" disabled>Lap</button>
+                <button class="btn-ghost" id="stopwatch-reset-btn">Reset</button>
+              </div>
+              <div class="laps-container" id="laps-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Second Row: Quick Links & Personal Notes/Focus -->
+      <section class="dashboard-grid">
+        <!-- Quick Links / Shortcuts -->
+        <div class="quick-links-card glass-panel" id="links-card">
+          <div class="card-top-row">
+            <h2 class="card-heading">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              Quick Launchpad
+            </h2>
+            <button class="icon-small-btn" id="add-link-btn" title="Add Bookmark" aria-label="Add Bookmark">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+          </div>
+          <div class="launchpad-grid" id="launchpad-grid">
+            <!-- Populated via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Daily Focus & Scratchpad -->
+        <div class="scratchpad-card glass-panel" id="notes-card">
+          <div class="card-top-row">
+            <h2 class="card-heading">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              Today's Main Focus
+            </h2>
+            <span class="autosave-tag" id="autosave-indicator">Saved</span>
+          </div>
+          <textarea id="daily-scratchpad" class="scratchpad-input" placeholder="What is your #1 priority or thought for today? Type here, it saves automatically..."></textarea>
+          
+          <!-- Inspiring Daily Quote -->
+          <div class="daily-quote-box" id="quote-box">
+            <p class="quote-text" id="quote-text">"Time is what we want most, but what we use worst."</p>
+            <span class="quote-author" id="quote-author">— William Penn</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-content">
+        <p>Built for precision, clarity, and focus.</p>
+        <span class="footer-hint">Tip: Click on your name or tagline to personalize it anytime.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bookmark Modal -->
+  <div class="modal-overlay" id="bookmark-modal" aria-hidden="true">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Quick Link</h3>
+        <button class="icon-small-btn" id="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <label for="link-title-input" class="form-label">Title</label>
+        <input type="text" id="link-title-input" class="form-input" placeholder="e.g., GitHub, Portfolio, Twitter">
+        <label for="link-url-input" class="form-label">URL</label>
+        <input type="url" id="link-url-input" class="form-input" placeholder="https://...">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" id="cancel-bookmark-btn">Cancel</button>
+        <button class="btn-primary" id="save-bookmark-btn">Add Link</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
