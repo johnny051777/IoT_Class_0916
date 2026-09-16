@@ -2,8 +2,8 @@
 
 > 結合物聯網 (IoT)、微控制器整合與現代前端工程的個人主頁與即時時鐘專注中心。
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-點此在線體驗-success?style=for-the-badge&logo=githubpages&logoColor=white)](https://johnny051777.github.io/IoT_Class_0916/)
-[![Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/johnny051777/IoT_Class_0916)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-點此在線體驗-success?style=for-the-badge&logo=githubpages&logoColor=white)](https://johnny051777.github.io/IoTClass0916/)
+[![Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/johnny051777/IoTClass0916)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Tech](https://img.shields.io/badge/HTML5-CSS3-JavaScript-blue)
 
@@ -11,8 +11,8 @@
 
 ## 🌐 Live Demo 線上預覽
 
-🔗 **線上展示網址**：[https://johnny051777.github.io/IoT_Class_0916/](https://johnny051777.github.io/IoT_Class_0916/)  
-📂 **儲存庫網址**：[https://github.com/johnny051777/IoT_Class_0916](https://github.com/johnny051777/IoT_Class_0916)
+🔗 **線上展示網址**：[https://johnny051777.github.io/IoTClass0916/](https://johnny051777.github.io/IoTClass0916/)  
+📂 **儲存庫網址**：[https://github.com/johnny051777/IoTClass0916](https://github.com/johnny051777/IoTClass0916)
 
 ---
 
@@ -46,7 +46,7 @@
   - 四套精心調製主題切換：黑曜石 (Obsidian)、賽博霓虹 (Cyber)、日落琥珀 (Sunset)、翡翠矩陣 (Emerald)
   - 支援手機、平板、桌機全裝置響應式排版 (RWD)
 - [x] **已準備 Repository URL**
-  - `https://github.com/johnny051777/IoT_Class_0916`
+  - `https://github.com/johnny051777/IoTClass0916`
 
 ---
 
@@ -54,8 +54,8 @@
 
 1. 複製儲存庫：
    ```bash
-   git clone https://github.com/johnny051777/IoT_Class_0916.git
-   cd IoT_Class_0916
+   git clone https://github.com/johnny051777/IoTClass0916.git
+   cd IoTClass0916
    ```
 2. 直接使用瀏覽器打開 `index.html`：
    ```powershell

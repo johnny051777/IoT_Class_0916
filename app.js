@@ -58,7 +58,7 @@
 
   // --- Default Quick Links ---
   const DEFAULT_BOOKMARKS = [
-    { title: 'IoT Class Repo', url: 'https://github.com/johnny051777/IoT_Class_0916', icon: '🐙' },
+    { title: 'IoT Class Repo', url: 'https://github.com/johnny051777/IoTClass0916', icon: '🐙' },
     { title: 'GitHub Profile', url: 'https://github.com/johnny051777', icon: '👤' },
     { title: 'MDN Web Docs', url: 'https://developer.mozilla.org', icon: '📚' },
     { title: 'DevDocs', url: 'https://devdocs.io', icon: '⚡' }
