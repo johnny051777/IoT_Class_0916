@@ -1,4 +1,5 @@
 # IoT Class 0916 — Personal Hub & Time+
+**作者：林昱岑 (Johnny)**
 
 A sleek, modern, glassmorphic personal dashboard and live time companion built for developers.
 

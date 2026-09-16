@@ -159,8 +159,8 @@
   // Profile Management
   // =========================================================================
   function loadProfile() {
-    const savedName = localStorage.getItem(STORAGE_KEYS.USER_NAME) || 'Johnny';
-    const savedTagline = localStorage.getItem(STORAGE_KEYS.USER_TAGLINE) || 'IoT Class 0916 • Developer & Creator';
+    const savedName = localStorage.getItem(STORAGE_KEYS.USER_NAME) || '林昱岑';
+    const savedTagline = localStorage.getItem(STORAGE_KEYS.USER_TAGLINE) || 'IoT Class 0916 • 軟體與物聯網創作';
 
     el.userName.textContent = savedName;
     el.userTagline.textContent = savedTagline;
@@ -179,10 +179,22 @@
 
   function updateInitials(name) {
     if (!name || !name.trim()) {
-      el.avatarInitials.textContent = 'ME';
+      el.avatarInitials.textContent = '昱岑';
       return;
     }
-    const parts = name.trim().split(/\s+/);
+    const cleanName = name.trim();
+    // Check if name contains Chinese characters
+    const hasCjk = /[\u4e00-\u9fa5]/.test(cleanName);
+    if (hasCjk) {
+      if (cleanName.length >= 3) {
+        el.avatarInitials.textContent = cleanName.slice(-2);
+      } else {
+        el.avatarInitials.textContent = cleanName;
+      }
+      return;
+    }
+
+    const parts = cleanName.split(/\s+/);
     if (parts.length >= 2) {
       el.avatarInitials.textContent = (parts[0][0] + parts[1][0]).toUpperCase();
     } else {
@@ -191,13 +203,13 @@
   }
 
   function saveProfileName() {
-    const newName = el.userName.textContent.trim() || 'Alex Chen';
+    const newName = el.userName.textContent.trim() || '林昱岑';
     localStorage.setItem(STORAGE_KEYS.USER_NAME, newName);
     updateInitials(newName);
   }
 
   function saveProfileTagline() {
-    const newTagline = el.userTagline.textContent.trim() || 'Living in the present moment';
+    const newTagline = el.userTagline.textContent.trim() || 'IoT Class 0916 • 軟體與物聯網創作';
     localStorage.setItem(STORAGE_KEYS.USER_TAGLINE, newTagline);
   }
 
